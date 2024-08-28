@@ -11,18 +11,18 @@ export default function Portfolio() {
                         </a>
                         
                         <a href="#">
-                            <i className='fa fa-fcebook-square'></i>
+                            <i className='fa fa-google-plus-square'></i>
                         </a>
                         <a href="#">
-                            <i className='fa fa-fcebook-square'></i>
-                        </a>
-                        
-                        <a href="#">
-                            <i className='fa fa-fcebook-square'></i>
+                            <i className='fa fa-instagram'></i>
                         </a>
                         
                         <a href="#">
-                            <i className='fa fa-fcebook=square'></i>
+                            <i className='fa fa-youtube-square'></i>
+                        </a>
+                        
+                        <a href="#">
+                            <i className='fa fa-twitter-square'></i>
                         </a>
                     </div>
                 </div>
@@ -30,3 +30,4 @@ export default function Portfolio() {
         </div>
     );
 }
+
