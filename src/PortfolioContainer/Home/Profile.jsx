@@ -1,5 +1,6 @@
 import React from "react";
 import Typical from "react-typical";
+import "./profile.css";
 export default function Profile() {
   return (
     <div className="profile-container">

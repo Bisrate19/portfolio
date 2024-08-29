@@ -1,0 +1,38 @@
+.profile-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 10%;
+  min-height: fit-content;
+  background-image: url("../../assets//Home/images.png");
+}
+.profile-parent {
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+}
+.profile-details-name {
+  font-size: 24px;
+  font-family: "Poppins SeniBold";
+}
+.profile-details-role{
+    display: flex;
+    flex-direction: column;
+    margin: 14px 0 24px 0;
+}
+.profile-details-role h1{
+    font-size: 40px;
+    font-family: cursive;
+}
+.primary test{
+    color:(--white);
+}
+.h1hglighted-text{
+    color: var(--dark-orange);
+}
+.profile-role-tagline{
+    font-size: 19px;
+    margin: 5px 0 0 0;
+    font-family: "Poppins Light";
+}
