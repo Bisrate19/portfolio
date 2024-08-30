@@ -8,7 +8,7 @@
   background-image: url("../../assets//Home/images.png");
 }
 .profile-parent {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   color: aliceblue;
 }
@@ -16,23 +16,55 @@
   font-size: 24px;
   font-family: "Poppins SeniBold";
 }
-.profile-details-role{
-    display: flex;
-    flex-direction: column;
-    margin: 14px 0 24px 0;
+.profile-details-role {
+  display: flex;
+  flex-direction: column;
+  margin: 14px 0 24px 0;
 }
-.profile-details-role h1{
-    font-size: 40px;
-    font-family: cursive;
+.profile-details-role h1 {
+  font-size: 40px;
+  font-family: cursive;
 }
-.primary test{
-    color:(--white);
+.primary test {
+  color: (--white);
 }
-.h1hglighted-text{
-    color: var(--dark-orange);
+.highlighted-text {
+  /*not working*/
+  color: var(--dark-orange);
 }
-.profile-role-tagline{
-    font-size: 19px;
-    margin: 5px 0 0 0;
-    font-family: "Poppins Light";
+.profile-role-tagline {
+  font-size: 19px;
+  margin: 5px 0 0 0;
+  font-family: "Poppins Light";
+}
+.profile-options .highlighted-btn {
+  margin: 0 0 0 20px;
+}
+.profile-options .highlighted-btn:hover {
+  margin: 0 0 0 20px;
+  background-color: cornsilk;
+  color: #111;
+}
+.profile-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 0px var(--white);
+  border-radius: 50%;
+  height: 380px;
+  width: 380px;
+  margin: 0 0px 0 100px;
+}
+.profile-picture-background {
+  height: 92%;
+  width: 92%;
+  background-image: url(../../assets/home/photo_2_2023-10-31_17-34-08.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.profile-picture-background:hover {
+  transform: scale(1.07);
+  transition: 1s ease-out;
 }
