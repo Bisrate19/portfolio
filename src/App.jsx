@@ -1,17 +1,13 @@
+import React from "react";
 import "./App.css";
-import Home from "./PortfolioContainer/Home/Home";
-// import Profile from "./PortfolioContainer/Home/Profile";
-// import Footer from "./PortfolioContainer/Home/Footer/Footer";
+import PortfolioContainer from "./PortfolioContainer/PortfolioContainer.jsx";
+
 function App() {
   return (
     <div className="App">
-      {
-        <Home />
-        
-        /* <Profile />
-      <Footer /> */
-      }
+      <PortfolioContainer />
     </div>
   );
 }
+
 export default App;
