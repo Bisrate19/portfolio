@@ -1,42 +1,19 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+:root {
+  --light-blue: #04c3ff;
+  --light-blue-shadow: rgb(69 211 255 / 27%);
+  --sea-green: #0aabead0;
+  --sea-green-dark: #09ebad;
+  --sea-green-shadow: rgba(11.19.173, 0.4);
+  --header-humburger-background: rgba(11.19, 173, 0.8);
+  --orange: #f57f17;
+  --dark-orange: #ff5823;
+  --orange-shadoow: rgba(245, 127, 23, 0.2);
+  --white: #ffffff;
+  --black: #33333333;
+  --disabled-btn: #09bead7a;
+  --error-message: #e44f4fd1;
+  --toast-error: #e44f4ffa;
+  --toast-shadow: #9c9c9ce3;
+  --toast-success: #0cbfae;
+  --loader-color: #0cbfae;
 }
