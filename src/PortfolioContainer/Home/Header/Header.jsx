@@ -58,7 +58,7 @@ const switchScreen = (index, screen)=> {
 
 
 return(
-  <div className="header-option" onClick={() =>setShowHeaderOptions(!showHeaderOptions)}>
+  <div className="header-container" onClick={() =>setShowHeaderOptions(!showHeaderOptions)}>
     <div className="header-parent">
         <div className="header-hamburger" onClick={()=>setShowHeaderOptions(!showHeaderOptions)}>
 <FontAwesomeIcon className="header-hamburger-bars" icon={faBars}/>
@@ -66,7 +66,7 @@ return(
         <div className="header-logo">
             <span>Bisrat~</span>
     </div>
-    <div className={(showHeaderOptions)? "header-options show-hamburgar-options": "heaer-options"}>
+    <div className={(showHeaderOptions)? "header- options show-hamburgar-options": "heaer-options"}>
     {getHeaderOptions()}
 
     </div>
