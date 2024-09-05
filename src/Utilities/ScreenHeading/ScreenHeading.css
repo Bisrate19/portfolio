@@ -37,6 +37,6 @@
 }
 .separator-block div {
   width: 35px;
-  border-radius: 10px;
+  border-radius: 10 px;
   background-color: var(--dark-original);
 }
