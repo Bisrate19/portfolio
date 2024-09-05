@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
-import Animations from "../../Utilities/Animations"; // Fixed import typo
+import Animations from "../../Utilities/Animations"; 
+import "./AboutMe.css";
 
 export default function AboutMe(props) {
   let fadeInScreenHandler = (screen) => {
@@ -10,7 +11,8 @@ export default function AboutMe(props) {
   };
 
   useEffect(() => {
-    const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+    const fadeInSubscription =
+      ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
     // Cleanup subscription on unmount
     return () => fadeInSubscription.unsubscribe();
@@ -58,11 +60,11 @@ export default function AboutMe(props) {
               {renderHighlight()}
             </div>
             <div className="about-me-options">
-              <button className="btnprimary-btn">Hire Me</button>
+              <button className="btn primary-btn">Hire Me</button>
               <a href="myy.pdf" download="myy.pdf">
                 <button className="btn highlighted-btn">Get Resume</button>
               </a>
-                          </div>
+            </div>
           </div>
         </div>
       </div>
