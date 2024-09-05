@@ -5,15 +5,18 @@
   align-items: center;
   margin: 50px 0 0 0;
 }
+
 .about-me-parent {
   max-width: 1000px;
   width: 70%;
 }
+
 .about-me-card {
   display: flex;
   width: 100%;
   box-shadow: 0 0px 20px -2px #1f2235;
 }
+
 .about-me-profile {
   width: 50%;
   background-image: url(../../assets/AboutMe/photo_2024-09-03_23-07-23.jpg);
@@ -21,29 +24,34 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .about-me-details {
   width: 45%;
-  text-align:justify;
+  text-align: justify;
   padding: 40px;
-  
 }
+
 .about-me-description {
   font-size: 14px;
 }
+
 .about-me-highlights {
   margin: 80px 0;
 }
+
 .highlight-heading {
   font-family: "Poppins Bold";
   font-size: 14px;
   margin: 0 0 5px 0;
 }
+
 .highlight {
   display: flex;
   align-items: center;
   margin: 5px 0;
   font-size: 12px;
 }
+
 .highlight-blob {
   height: 12px;
   width: 12px;
@@ -51,6 +59,33 @@
   background-color: #ff5823;
   border-radius: 50%;
 }
-/* .about-me-options .highlighted-btn{
-    margin: 0 0 0 30px;
-} */
+
+.about-me-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background-color: #ff5823;
+  color: white;
+}
+
+.highlighted-btn {
+  background-color: transparent;
+  color: #ff5823;
+  border: 2px solid #ff5823;
+}
+
+.about-me-options .highlighted-btn {
+  margin: 0 0 0 30px;
+}
