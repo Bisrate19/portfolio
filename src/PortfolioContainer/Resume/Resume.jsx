@@ -28,6 +28,26 @@ export default function Resume(props) {
     </div>;
   };
 
+  const resumeBullets = [
+    { label: "Education", logoSrc: "education.svg" },
+    { label: "Work History", logoSrc: "work-history.svg" },
+    { label: "Programming Skills", logoSrc: "programming-skills.svg" },
+    { label: "Projects", logoSrc: "projects.svg" },
+    { label: "Interests", logoSrc: "interests.svg" },
+  ];
+
+  const programmingSkillsDetails = [
+    { skill: "JavaScript", ratingPercentage: 75 },
+    { skill: "React JS", ratingPercentage: 85 },
+    { skill: "React Native", ratingPercentage: 55 },
+    { skill: "Express JS", ratingPercentage: 45 },
+    { skill: "Node JS", ratingPercentage: 50 },
+    { skill: "Mongo Db", ratingPercentage: 20 },
+    { skill: "Core Java", ratingPercentage: 85 },
+    { skill: "HTML", ratingPercentage: 95 },
+    { skill: "CSS", ratingPercentage: 95 },
+  ];
+
   let fadeInScreenHandler = (screen) => {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
