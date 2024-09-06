@@ -47,7 +47,26 @@ export default function Resume(props) {
     { skill: "HTML", ratingPercentage: 95 },
     { skill: "CSS", ratingPercentage: 95 },
   ];
-
+const projectDetails =[
+{
+    title: "personal portfolio website",
+    duration: {fromDate: "2023", toDate: "2023"},
+    description: "A personal portfolio website to showcase all details and projects at one place",
+    subHeading: "Technoogy used : React JS, Bootstrap",
+},
+{
+    title: "Final Year Project website",
+    duration: {fromDate: "2023", toDate: "2023"},
+    description: "House Rental web app to Hossaena Town",
+    subHeading: "Technoogy used : HTML,CSS,JS,SQL",
+},
+{
+    title: "personal portfolio website",
+    duration: {fromDate: "2023", toDate: "2023"},
+    description: "A personal portfolio website to showcase all details and projects at one place",
+    subHeading: "Technoogy used : React JS, Bootstrap",
+}
+]
   let fadeInScreenHandler = (screen) => {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
