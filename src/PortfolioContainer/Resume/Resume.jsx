@@ -109,7 +109,6 @@ export default function Resume(props) {
           conpany
         </span>
       </div>
-
       <div className="experience-description">
         <span className="resume-description-text">
           developed a website for client with landing page ........
@@ -124,7 +123,52 @@ export default function Resume(props) {
           -- i stretch my mental capacity to develop ui as per the given
           designs.
         </span>
-        <br />
+      </div>
+      ,
+      <div
+        className="resume-screen-container programming-skills-container"
+        key="programming-skills"
+      >
+        {programmingSkillsDetails.map((skill, index) => (
+          <div className="skill-parent" key={index}>
+            <div className="heading-bullet"></div>
+            <span>{skill.skill}</span>
+            <div className="skill-percentage">
+              <div
+                style={{ width: skill.ratingPercentage + "%" }}
+                className="active-percentage"
+              ></div>
+            </div>
+          </div>
+        ))}
+      </div>
+      ,
+      <div className="resume-screen-container" key="projects">
+        {projectsDetails.map((projectsDetails, index) => (
+          <ResumeHeading
+            key={index}
+            heading={projectsDetails.title}
+            subHeading={projectDetails.subHeading}
+            description={projectDetails.description}
+            fromDate={projectDetails.duration.fromDate}
+            toDate={projectDetails.duration.toDate}
+          />
+        ))}
+      </div>
+      ,
+      <div className="resume-screen-container" key="intersests">
+        <ResumeHeading
+          heading="Teaching"
+          description="Apart from a tech enthusiast and a code writter, i also love to......."
+        />
+        <ResumeHeading
+          heading="Music"
+          description="Apart from a tech enthusiast and a code writter, i also love to......."
+        />
+        <ResumeHeading
+          heading="Movie"
+          description="Apart from a tech enthusiast and a code writter, i also love to......."
+        />
       </div>
     </div>,
   ];
