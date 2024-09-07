@@ -3,37 +3,52 @@ import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../../Utilities/Animations";
 
+import educationLogo from "../../assets/Resume/education.svg";
+import workHistoryLogo from "../../assets/Resume/work-history.svg";
+import programmingSkillsLogo from "../../assets/Resume/programming-skills.svg";
+import projectsLogo from "../../assets/Resume/projects.svg";
+import interestsLogo from "../../assets/Resume/interests.svg";
+
 export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
 
-  const ResumeHeading = (props) => {
-    <div className="resume-heading">
-      <div className="resume-main-heading">
-        <div className="heading-bullet">
-          <span>{props.heading ? props.heading : ""}</span>
-          {props.fromDate && props.toDate ? (
-            <div className="heading-date">
-              {props.fromDate + "_" + props.toDate}
-            </div>
-          ) : (
-            <div></div>
-          )}
-        </div>
+  let fadeInScreenHandler = (screen) => {
+    if (screen.fadeInScreen !== props.id) return;
+    Animations.animations.fadeInScreen(props.id);
+  };
+  const fadeInSubscription =
+    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-        <div className="resume-heading-description">
-          <span>{props.description ? props.description : ""}</span>
+  const ResumeHeading = (props) => {
+    return (
+      <div className="resume-heading">
+        <div className="resume-main-heading">
+          <div className="heading-bullet">
+            <span>{props.heading ? props.heading : ""}</span>
+            {props.fromDate && props.toDate ? (
+              <div className="heading-date">
+                {props.fromDate + "_" + props.toDate}
+              </div>
+            ) : (
+              <div></div>
+            )}
+          </div>
+
+          <div className="resume-heading-description">
+            <span>{props.description ? props.description : ""}</span>
+          </div>
         </div>
       </div>
-    </div>;
+    );
   };
 
   const resumeBullets = [
-    { label: "Education", logoSrc: "education.svg" },
-    { label: "Work History", logoSrc: "work-history.svg" },
-    { label: "Programming Skills", logoSrc: "programming-skills.svg" },
-    { label: "Projects", logoSrc: "projects.svg" },
-    { label: "Interests", logoSrc: "interests.svg" },
+    { label: "Education", logoSrc: educationLogo },
+    { label: "Work History", logoSrc: workHistoryLogo },
+    { label: "Programming Skills", logoSrc: programmingSkillsLogo },
+    { label: "Projects", logoSrc: projectsLogo },
+    { label: "Interests", logoSrc: interestsLogo },
   ];
 
   const programmingSkillsDetails = [
@@ -47,54 +62,30 @@ export default function Resume(props) {
     { skill: "HTML", ratingPercentage: 95 },
     { skill: "CSS", ratingPercentage: 95 },
   ];
+
   const projectDetails = [
     {
-      title: "personal portfolio website",
+      title: "Personal Portfolio Website",
       duration: { fromDate: "2023", toDate: "2023" },
-      description:
-        "A personal portfolio website to showcase all details and projects at one place",
-      subHeading: "Technoogy used : React JS, Bootstrap",
+      description: "A personal portfolio website to showcase all details and projects in one place.",
+      subHeading: "Technology used: React JS, Bootstrap",
     },
     {
-      title: "Final Year Project website",
+      title: "Final Year Project Website",
       duration: { fromDate: "2023", toDate: "2023" },
-      description: "House Rental web app to Hossaena Town",
-      subHeading: "Technoogy used : HTML,CSS,JS,SQL",
-    },
-    {
-      title: "personal portfolio website",
-      duration: { fromDate: "2023", toDate: "2023" },
-      description:
-        "A personal portfolio website to showcase all details and projects at one place",
-      subHeading: "Technoogy used : React JS, Bootstrap",
+      description: "House Rental web app for Hossaena Town.",
+      subHeading: "Technology used: HTML, CSS, JS, SQL",
     },
   ];
 
   const resumeDetails = [
     <div className="resume-screen-container" key="education">
       <ResumeHeading
-        heading={"Wachemo University,Hossaena Ethiopia"}
+        heading={"Wachemo University, Hossaena Ethiopia"}
         subHeading={"Bachelor Of Science Information Technology"}
         fromDate={"2019"}
         toDate={"2023"}
       />
-    </div>,
-    <div className="resume-screen-container" key="education">
-      <ResumeHeading
-        heading={"Wachemo University,Hossaena Ethiopia"}
-        subHeading={"Bachelor Of Science Information Technology"}
-        fromDate={"2019"}
-        toDate={"2023"}
-      />
-      ,
-      <div className="resume-screen-container" key="education">
-        <ResumeHeading
-          heading={"Wachemo University,Hossaena Ethiopia"}
-          subHeading={"Bachelor Of Science Information Technology"}
-          fromDate={"2019"}
-          toDate={"2023"}
-        />
-      </div>
     </div>,
     <div className="resume-screen-container" key="work-experience">
       <ResumeHeading
@@ -105,84 +96,95 @@ export default function Resume(props) {
       />
       <div className="experience-description">
         <span className="resume-description-text">
-          currently working as a data encoder ans ICT specialist for a private
-          conpany
-        </span>
-      </div>
-      <div className="experience-description">
-        <span className="resume-description-text">
-          developed a website for client with landing page ........
+          Currently working as a data encoder and ICT specialist for a private company.
         </span>
         <br />
         <span className="resume-description-text">
-          -- Integrated the web app with backend services t create a new user
-          onboarding application with dynamic form content.
+          Developed a website for the client with a landing page and integrated the web app with backend services for a new user onboarding application.
         </span>
         <br />
         <span className="resume-description-text">
-          -- i stretch my mental capacity to develop ui as per the given
-          designs.
+          Worked on UI development based on the given designs.
         </span>
       </div>
-      ,
-      <div
-        className="resume-screen-container programming-skills-container"
-        key="programming-skills"
-      >
-        {programmingSkillsDetails.map((skill, index) => (
-          <div className="skill-parent" key={index}>
-            <div className="heading-bullet"></div>
-            <span>{skill.skill}</span>
-            <div className="skill-percentage">
-              <div
-                style={{ width: skill.ratingPercentage + "%" }}
-                className="active-percentage"
-              ></div>
-            </div>
+    </div>,
+    <div className="resume-screen-container" key="programming-skills">
+      {programmingSkillsDetails.map((skill, index) => (
+        <div className="skill-parent" key={index}>
+          <span>{skill.skill}</span>
+          <div className="skill-percentage">
+            <div
+              style={{ width: skill.ratingPercentage + "%" }}
+              className="active-percentage"
+            ></div>
           </div>
-        ))}
-      </div>
-      ,
-      <div className="resume-screen-container" key="projects">
-        {projectsDetails.map((projectsDetails, index) => (
-          <ResumeHeading
-            key={index}
-            heading={projectsDetails.title}
-            subHeading={projectDetails.subHeading}
-            description={projectDetails.description}
-            fromDate={projectDetails.duration.fromDate}
-            toDate={projectDetails.duration.toDate}
-          />
-        ))}
-      </div>
-      ,
-      <div className="resume-screen-container" key="intersests">
+        </div>
+      ))}
+    </div>,
+    <div className="resume-screen-container" key="projects">
+      {projectDetails.map((project, index) => (
         <ResumeHeading
-          heading="Teaching"
-          description="Apart from a tech enthusiast and a code writter, i also love to......."
+          key={index}
+          heading={project.title}
+          subHeading={project.subHeading}
+          description={project.description}
+          fromDate={project.duration.fromDate}
+          toDate={project.duration.toDate}
         />
-        <ResumeHeading
-          heading="Music"
-          description="Apart from a tech enthusiast and a code writter, i also love to......."
-        />
-        <ResumeHeading
-          heading="Movie"
-          description="Apart from a tech enthusiast and a code writter, i also love to......."
-        />
-      </div>
+      ))}
     </div>,
   ];
 
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
+  const handleCarousal = (index) => {
+    let offsetHeight = 360;
+    let newCarousalOffset = {
+      style: { transform: "translateY(" + index * offsetHeight * -1 + "px" },
+    };
+    setCarousalOffSetStyle(newCarousalOffset);
+    setSelectedBulletIndex(index);
   };
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
+  const getBullets = () => {
+    return resumeBullets.map((bullet, index) => (
+      <div
+        onClick={() => handleCarousal(index)}
+        className={
+          index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"
+        }
+        key={index}
+      >
+        <img
+          className="bullet-logo"
+          src={bullet.logoSrc}
+          alt="bullet icon"
+        />
+      </div>
+    ));
+  };
+
+  const getResumeScreen = () => {
+    return (
+      <div
+        style={carousalOffSetStyle.style}
+        className="resume-details-carousal"
+      >
+        {resumeDetails.map((ResumeDetail) => ResumeDetail)}
+      </div>
+    );
+  };
+
   return (
     <div className="resume-container screen-container" id={props.id || ""}>
       <div className="resume-content">
         <ScreenHeading title={"Resume"} subHeading={"My Formal Bio Details"} />
+        <div className="resume-card">
+          <div className="bullet-container">
+            <div className="bullet-icons">
+              <div className="bullets">{getBullets()}</div>
+            </div>
+          </div>
+          <div className="resume-bullet-details">{getResumeScreen()}</div>
+        </div>
       </div>
     </div>
   );
