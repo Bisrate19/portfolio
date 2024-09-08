@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../../Utilities/Animations";
+import "./Resume.css";
 
 export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
@@ -50,7 +51,10 @@ export default function Resume(props) {
   const resumeBullets = [
     { label: "Education", logoSrc: "/assets/Resume/education.svg" },
     { label: "Work History", logoSrc: "/assets/Resume/work-history.svg" },
-    { label: "Programming Skills", logoSrc: "/assets/Resume/programming-skills.svg" },
+    {
+      label: "Programming Skills",
+      logoSrc: "/assets/Resume/programming-skills.svg",
+    },
     { label: "Projects", logoSrc: "/assets/Resume/projects.svg" },
     { label: "Interests", logoSrc: "/assets/Resume/interests.svg" },
   ];
