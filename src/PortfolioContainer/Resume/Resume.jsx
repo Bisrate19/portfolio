@@ -1,42 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../../Utilities/Animations";
-
-import educationLogo from "../../assets/Resume/education.svg";
-import workHistoryLogo from "../../assets/Resume/work-history.svg";
-import programmingSkillsLogo from "../../assets/Resume/programming-skills.svg";
-import projectsLogo from "../../assets/Resume/projects.svg";
-import interestsLogo from "../../assets/Resume/interests.svg";
 
 export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
 
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
-  };
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+  useEffect(() => {
+    const fadeInScreenHandler = (screen) => {
+      if (screen.fadeInScreen !== props.id) return;
+      Animations.animations.fadeInScreen(props.id);
+    };
+
+    const fadeInSubscription =
+      ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
+    return () => {
+      // Clean up the subscription on unmount
+      fadeInSubscription.unsubscribe();
+    };
+  }, [props.id]);
 
   const ResumeHeading = (props) => {
     return (
       <div className="resume-heading">
         <div className="resume-main-heading">
           <div className="heading-bullet">
-            <span>{props.heading ? props.heading : ""}</span>
+            <span>{props.heading || ""}</span>
             {props.fromDate && props.toDate ? (
               <div className="heading-date">
-                {props.fromDate + "_" + props.toDate}
+                {props.fromDate + " - " + props.toDate}
               </div>
-            ) : (
-              <div></div>
-            )}
+            ) : null}
+          </div>
+
+          <div className="resume-sub-heading">
+            <span>{props.subHeading || ""}</span>
           </div>
 
           <div className="resume-heading-description">
-            <span>{props.description ? props.description : ""}</span>
+            <span>{props.description || ""}</span>
           </div>
         </div>
       </div>
@@ -44,11 +48,11 @@ export default function Resume(props) {
   };
 
   const resumeBullets = [
-    { label: "Education", logoSrc: educationLogo },
-    { label: "Work History", logoSrc: workHistoryLogo },
-    { label: "Programming Skills", logoSrc: programmingSkillsLogo },
-    { label: "Projects", logoSrc: projectsLogo },
-    { label: "Interests", logoSrc: interestsLogo },
+    { label: "Education", logoSrc: "/assets/Resume/education.svg" },
+    { label: "Work History", logoSrc: "/assets/Resume/work-history.svg" },
+    { label: "Programming Skills", logoSrc: "/assets/Resume/programming-skills.svg" },
+    { label: "Projects", logoSrc: "/assets/Resume/projects.svg" },
+    { label: "Interests", logoSrc: "/assets/Resume/interests.svg" },
   ];
 
   const programmingSkillsDetails = [
@@ -57,7 +61,7 @@ export default function Resume(props) {
     { skill: "React Native", ratingPercentage: 55 },
     { skill: "Express JS", ratingPercentage: 45 },
     { skill: "Node JS", ratingPercentage: 50 },
-    { skill: "Mongo Db", ratingPercentage: 20 },
+    { skill: "Mongo DB", ratingPercentage: 20 },
     { skill: "Core Java", ratingPercentage: 85 },
     { skill: "HTML", ratingPercentage: 95 },
     { skill: "CSS", ratingPercentage: 95 },
@@ -67,7 +71,8 @@ export default function Resume(props) {
     {
       title: "Personal Portfolio Website",
       duration: { fromDate: "2023", toDate: "2023" },
-      description: "A personal portfolio website to showcase all details and projects in one place.",
+      description:
+        "A personal portfolio website to showcase all details and projects in one place.",
       subHeading: "Technology used: React JS, Bootstrap",
     },
     {
@@ -96,11 +101,14 @@ export default function Resume(props) {
       />
       <div className="experience-description">
         <span className="resume-description-text">
-          Currently working as a data encoder and ICT specialist for a private company.
+          Currently working as a data encoder and ICT specialist for a private
+          company.
         </span>
         <br />
         <span className="resume-description-text">
-          Developed a website for the client with a landing page and integrated the web app with backend services for a new user onboarding application.
+          Developed a website for the client with a landing page and integrated
+          the web app with backend services for a new user onboarding
+          application.
         </span>
         <br />
         <span className="resume-description-text">
@@ -114,7 +122,7 @@ export default function Resume(props) {
           <span>{skill.skill}</span>
           <div className="skill-percentage">
             <div
-              style={{ width: skill.ratingPercentage + "%" }}
+              style={{ width: `${skill.ratingPercentage}%` }}
               className="active-percentage"
             ></div>
           </div>
@@ -136,9 +144,9 @@ export default function Resume(props) {
   ];
 
   const handleCarousal = (index) => {
-    let offsetHeight = 360;
-    let newCarousalOffset = {
-      style: { transform: "translateY(" + index * offsetHeight * -1 + "px" },
+    const offsetHeight = 360;
+    const newCarousalOffset = {
+      transform: `translateY(${index * offsetHeight * -1}px)`,
     };
     setCarousalOffSetStyle(newCarousalOffset);
     setSelectedBulletIndex(index);
@@ -156,7 +164,7 @@ export default function Resume(props) {
         <img
           className="bullet-logo"
           src={bullet.logoSrc}
-          alt="bullet icon"
+          alt={`${bullet.label} icon`}
         />
       </div>
     ));
@@ -165,7 +173,7 @@ export default function Resume(props) {
   const getResumeScreen = () => {
     return (
       <div
-        style={carousalOffSetStyle.style}
+        style={{ transform: carousalOffSetStyle.transform }}
         className="resume-details-carousal"
       >
         {resumeDetails.map((ResumeDetail) => ResumeDetail)}
