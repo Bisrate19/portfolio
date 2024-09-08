@@ -11,7 +11,7 @@
   height: 360px;
   width: 1000px;
 }
-/* .resume-bullets {
+.resume-bullets {
   height: 100%;
   box-shadow: 15px 0 9px -105px #1f2235;
   width: 320px;
@@ -30,7 +30,7 @@
 .resume-details-carousal {
   transition: transform 1s ease-out;
 }
-.bullet-container {
+/*.bullet-container {
   display: flex;
   align-items: center;
   height: 100%;
