@@ -65,7 +65,7 @@ export default function Resume(props) {
     { skill: "React Native", ratingPercentage: 55 },
     { skill: "Express JS", ratingPercentage: 45 },
     { skill: "Node JS", ratingPercentage: 50 },
-    { skill: "Mongo DB", ratingPercentage: 20 },
+    { skill: "Mongo DB", ratingPercentage: 10 },
     { skill: "Core Java", ratingPercentage: 85 },
     { skill: "HTML", ratingPercentage: 95 },
     { skill: "CSS", ratingPercentage: 95 },
