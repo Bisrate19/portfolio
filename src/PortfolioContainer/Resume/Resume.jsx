@@ -2,11 +2,20 @@ import React, { useState, useEffect } from "react";
 import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../../Utilities/Animations";
+import { FaReact, FaNode, FaDatabase, } from "react-icons/fa";
+
+
 import "./Resume.css";
 
 export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
+  const iconMapping = {
+    react: FaReact,
+    node: FaNode,
+    database: FaDatabase,
+    
+  };
 
   useEffect(() => {
     const fadeInScreenHandler = (screen) => {
@@ -49,14 +58,31 @@ export default function Resume(props) {
   };
 
   const resumeBullets = [
-    { label: "Education", logoSrc: "/assets/Resume/education.svg" },
-    { label: "Work History", logoSrc: "/assets/Resume/work-history.svg" },
     {
-      label: "Programming Skills",
-      logoSrc: "/assets/Resume/programming-skills.svg",
+      label: "Education",
+      logoSrc: "react", // Will display FaReact
     },
-    { label: "Projects", logoSrc: "/assets/Resume/projects.svg" },
-    { label: "Interests", logoSrc: "/assets/Resume/interests.svg" },
+    {
+      label: "Wprk Experience",
+      logoSrc: "node", // Will display FaNode
+    },
+    {
+      label: "Skills",
+      logoSrc: "database", // Will display FaDatabase
+    },
+    {
+      label: "Projects",
+      logoSrc: "database", // Will display FaDatabase
+    },
+    {
+      label: "Database",
+      logoSrc: "database", // Will display FaDatabase
+    },
+    {
+      label: "Database",
+      logoSrc: "database", // Will display FaDatabase
+    },
+    // Additional bullets
   ];
 
   const programmingSkillsDetails = [
@@ -157,21 +183,22 @@ export default function Resume(props) {
   };
 
   const getBullets = () => {
-    return resumeBullets.map((bullet, index) => (
-      <div
-        onClick={() => handleCarousal(index)}
-        className={
-          index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"
-        }
-        key={index}
-      >
-        <img
-          className="bullet-logo"
-          src={bullet.logoSrc}
-          alt={`${bullet.label} icon`}
-        />
-      </div>
-    ));
+    return resumeBullets.map((bullet, index) => {
+      const IconComponent = iconMapping[bullet.logoSrc];
+      const IconName = bullet.label;
+      return (
+        <div
+          onClick={() => handleCarousal(index)}
+          className={
+            index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"
+          }
+          key={index}
+        >
+          {IconComponent && <IconComponent />}
+          {bullet.label}
+        </div>
+      );
+    });
   };
 
   const getResumeScreen = () => {
