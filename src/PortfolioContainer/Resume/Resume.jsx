@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../../Utilities/Animations";
-import { FaReact, FaNode, FaDatabase, } from "react-icons/fa";
+import { FaBookOpenReader } from "react-icons/fa6";
+import { FaBriefcase } from "react-icons/fa";
+import { FaNode, FaDatabase, } from "react-icons/fa";
+import { GiSkills } from "react-icons/gi";
+import { FaLaptopCode } from "react-icons/fa";
+
 
 
 import "./Resume.css";
@@ -11,9 +16,12 @@ export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
   const iconMapping = {
-    react: FaReact,
+    education: FaBookOpenReader,
     node: FaNode,
     database: FaDatabase,
+    skills: GiSkills,
+    workexperience:FaBriefcase,
+    projects:FaLaptopCode
     
   };
 
@@ -60,28 +68,29 @@ export default function Resume(props) {
   const resumeBullets = [
     {
       label: "Education",
-      logoSrc: "react", // Will display FaReact
+      logoSrc: "education", // Will display FaReact
     },
     {
-      label: "Wprk Experience",
-      logoSrc: "node", // Will display FaNode
+      label: "Work Experience",
+      logoSrc: "workexperience", // Will display FaNode
     },
     {
       label: "Skills",
-      logoSrc: "database", // Will display FaDatabase
+      logoSrc: "skills", // Will display FaDatabase
     },
     {
-      label: "Projects",
-      logoSrc: "database", // Will display FaDatabase
+      label: "projects",
+      logoSrc: "projects", // Will display FaDatabase
     },
     {
-      label: "Database",
+      label: "other",
       logoSrc: "database", // Will display FaDatabase
     },
-    {
-      label: "Database",
-      logoSrc: "database", // Will display FaDatabase
-    },
+    // {
+    //   label: "Database",
+    //   logoSrc: "database", // Will display FaDatabase
+    // },
+
     // Additional bullets
   ];
 
