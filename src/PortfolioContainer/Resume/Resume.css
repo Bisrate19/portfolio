@@ -139,6 +139,9 @@
   font-size: 14px;
   border-radius: 14px;
   color: white;
+  display: inline-block; /* Adjusts size to fit text content */
+  vertical-align: middle; /* Keeps it aligned with other elements */
+  margin-left: 250px;
 }
 
 /* Programming Skills Container */
@@ -148,7 +151,6 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 /* Skill percentage bar */
@@ -167,7 +169,6 @@
   height: 100%;
   transition: width 0.8s ease;
   background-color: #235e8c;
-  
 }
 
 /* Skill text */

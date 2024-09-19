@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../../Utilities/Animations";
-import { FaBookOpenReader } from "react-icons/fa6";
-import { FaBriefcase } from "react-icons/fa";
+import { FaGraduationCap } from 'react-icons/fa';
+import { AiOutlineUser } from 'react-icons/ai';
 import { FaNode, FaDatabase, } from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
 import { FaLaptopCode } from "react-icons/fa";
+import { FaHeart } from 'react-icons/fa';
 
 
 
@@ -16,13 +17,14 @@ export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
   const iconMapping = {
-    education: FaBookOpenReader,
+    education: FaGraduationCap,
+
     node: FaNode,
+    workexperience:AiOutlineUser,
     database: FaDatabase,
     skills: GiSkills,
-    workexperience:FaBriefcase,
-    projects:FaLaptopCode
-    
+    projects:FaLaptopCode,
+    interest:FaHeart,   
   };
 
   useEffect(() => {
@@ -83,8 +85,8 @@ export default function Resume(props) {
       logoSrc: "projects", // Will display FaDatabase
     },
     {
-      label: "other",
-      logoSrc: "database", // Will display FaDatabase
+      label: "interest",
+      logoSrc: "interest", // Will display FaDatabase
     },
     // {
     //   label: "Database",
