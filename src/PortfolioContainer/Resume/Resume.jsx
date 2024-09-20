@@ -6,7 +6,7 @@ import { FaGraduationCap } from 'react-icons/fa';
 import { AiOutlineUser } from 'react-icons/ai';
 import { FaNode, FaDatabase, } from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
-import { FaLaptopCode } from "react-icons/fa";
+  import { FaCode } from "react-icons/fa";
 import { FaHeart } from 'react-icons/fa';
 
 
@@ -23,7 +23,7 @@ export default function Resume(props) {
     workexperience:AiOutlineUser,
     database: FaDatabase,
     skills: GiSkills,
-    projects:FaLaptopCode,
+    projects:FaCode,
     interest:FaHeart,   
   };
 
