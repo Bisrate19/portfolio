@@ -25,14 +25,14 @@
 }
 
 .col h2 {
-    font-size: 2rem;
+    font-size: 4rem;
     color: #fff;
     margin-bottom: 10px;
 }
 
 .col a {
-    color: #fff;
-    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-size: 1.9rem;
     margin: 0 10px;
     transition: color 0.3s ease;
 }
