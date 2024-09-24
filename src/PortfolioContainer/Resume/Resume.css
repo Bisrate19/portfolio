@@ -180,60 +180,31 @@
   margin-left: 80px;
 }
 
-/* Bullet container responsiveness */
 @media (max-width: 768px) {
-  .resume-card {
-    flex-direction: column;
-    width: 100%;
-    height: auto;
+  .bullet-container {
+      flex-direction: row; /* Switch to horizontal layout */
+      flex-wrap: wrap; /* Allow wrapping of bullets if too wide */
+      justify-content: center;
   }
 
-  .resume-bullets {
-    width: 100%;
-    border-radius: 15px 15px 0 0;
+  .bullet {
+      margin: 10px; /* Add spacing around each bullet */
+      flex: 1 1 45%; /* Flex bullets to take up 45% of the width */
   }
 
-  .resume-bullet-details {
-    width: 100%;
-    padding: 20px;
-  }
-}
-@media only screen and (max-width:1120px){
-  .resume-card{
-    width: 880px;
-  }
-  .resume-bullet-details{
-    padding: 0 0 0 70px;
-  }
-}
-@media only screen and (max-width:1023px){
-  .resume-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .bullets{
-    width:90%;
-  }
-  .resume-card{
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    margin: 30px 0;
-    align-items: center;
-    width: 90%;
-  }
-  .resume-bullet-details{
-    height: 360px;
-    width: fit-content;
-    padding: 0;
-  }
-  .resume-bullets{
-    width: 100%;
-    margin: 30px 0;
-  }
-  .selected-bullet{
-    width: 100%;
+  .bullet-icons {
+      margin-right: 8px; /* Adjust spacing between icon and text */
   }
 }
 
+/* Even more compact for very small screens */
+@media (max-width: 480px) {
+  .bullet {
+      flex: 1 1 100%; /* Each bullet takes up full width on small devices */
+      margin: 5px 0; /* Reduce margin for tighter spacing */
+  }
+
+  .bullet-icons {
+      margin-right: 6px; /* Slightly closer icon to label for smaller screens */
+  }
+}
