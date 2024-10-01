@@ -3,9 +3,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0 0 20px;
+    padding: 10px 0 0 10px;
     background: linear-gradient(to bottom right, #1d4644, #6f99a7, #63bde3); /* Gradient background */
-    flex-direction: column; /* Column layout */
+    flex-direction:column; /* Column layout */
   }
   
   /* Back-form styles */

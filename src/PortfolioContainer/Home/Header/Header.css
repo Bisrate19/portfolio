@@ -3,6 +3,7 @@
   justify-content: center;
   height: 140px;
   color: vavr(--white);
+  
 }
 .header-parent {
   display: flex;
@@ -20,12 +21,14 @@
 .header-optopns {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   
 }
 .header-option {
   font-size: 16px;
   cursor: pointer;
   font-weight: 600;
+  
 }
 .header-hamburger {
   display: none;
