@@ -1,198 +1,207 @@
 .main-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0 0 10px;
-    background: linear-gradient(to bottom right, #1d4644, #6f99a7, #63bde3); /* Gradient background */
-    flex-direction:column; /* Column layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 0 10px;
+  background: linear-gradient(
+    to bottom right,
+    #1d4644,
+    #6f99a7,
+    #63bde3
+  ); /* Gradient background */
+  flex-direction: column; /* Column layout */
+  border-radius: 10px;
+}
+
+/* Back-form styles */
+.back-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 20px 50px; /* Maintain padding */
+  background-color: rgba(
+    245,
+    245,
+    255,
+    0.8
+  ); /* Slightly transparent background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+  width: 100%; /* Set to 100% for full width inside central form */
+  max-width: 600px; /* Set max width to keep it smaller */
+  margin: auto; /* Center horizontally */
+}
+
+.col {
+  text-align: center;
+
+  width: 100%; /* Full width of the back-form */
+}
+
+.col h2 {
+  font-size: 3rem; /* Adjusted font size */
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.col a {
+  color: rgb(255, 255, 255);
+  font-size: 2rem; /* Adjusted font size */
+  margin: 5px 25px 0;
+  transition: color 0.3s ease;
+}
+
+.col a:hover {
+  color: #6c63ff; /* Accent color on hover */
+}
+
+/* Central form styles */
+.central-form {
+  max-width: 900px; /* Make central form slightly smaller */
+  padding: 20px;
+  display: flex;
+  border-radius: 20px;
+  margin: 0 auto;
+  flex-direction: column-reverse;
+  justify-content: center; /* Center content vertically */
+  background-color: rgb(16, 55, 55);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for form depth */
+  width: 100%; /* Ensure it takes full width of the container */
+}
+
+.img-back {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.img-back img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Form and inputs */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+  color: #000; /* Dark text color for labels */
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #f5f5ff; /* Light input background */
+  color: #333;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #072a4b; /* Accent color on focus */
+  box-shadow: 0 0 5px rgba(3, 43, 95, 0.5);
+}
+
+/* Send button */
+.send-btn {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.send-btn button {
+  padding: 10px 30px;
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-btn button:hover {
+  background-color: #07023c;
+}
+
+.send-btn i {
+  margin-left: 5px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 80px) {
+  .main-container {
+    padding: 10px;
   }
-  
-  /* Back-form styles */
-  .back-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    padding: 20px 50px; /* Maintain padding */
-    background-color: rgba(245, 245, 255, 0.8); /* Slightly transparent background */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
-    width: 100%; /* Set to 100% for full width inside central form */
-    max-width: 600px; /* Set max width to keep it smaller */
-    margin: auto; /* Center horizontally */
-  }
-  
-  /* Updated .col to be at the top of the back-form */
-  .col {
-    text-align: center;
-    margin-bottom: 20px;
-    width: 100%; /* Full width of the back-form */
-  }
-  
-  .col h2 {
-    font-size: 3rem; /* Adjusted font size */
-    color: #fff;
-    margin-bottom: 10px;
-  }
-  
-  .col a {
-    color: rgb(255, 255, 255);
-    font-size: 1.5rem; /* Adjusted font size */
-    margin: 0 10px;
-    transition: color 0.3s ease;
-  }
-  
-  .col a:hover {
-    color: #6c63ff; /* Accent color on hover */
-  }
-  
-  /* Central form styles */
+
   .central-form {
-    max-width: 900px; /* Make central form slightly smaller */
-    padding: 30px;
-    display: flex;
-    border-radius: 12px;
-    margin: 0 auto;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    background-color: #1f2235; /* Dark background for the form */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for form depth */
-    width: 100%; /* Ensure it takes full width of the container */
-  }
-  
-  .img-back {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .img-back img {
+    padding: 15px;
     max-width: 100%;
-    height: auto;
-    border-radius: 10px;
   }
-  
-  /* Form and inputs */
-  form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+
+  .col h2 {
+    font-size: 2rem;
   }
-  
-  label {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 5px;
-    color: #000; /* Dark text color for labels */
+
+  .col a {
+    font-size: 1.5rem;
   }
-  
+
+  .back-form {
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  }
+
+  .img-back img {
+    border-radius: 8px;
+  }
+
   input,
   textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    box-sizing: border-box;
-    background-color: #f5f5ff; /* Light input background */
-    color: #333;
+    padding: 8px;
+    font-size: 0.9rem;
   }
-  
-  textarea {
-    height: 100px;
-    resize: none;
-  }
-  
-  input:focus,
-  textarea:focus {
-    outline: none;
-    border-color: #072a4b; /* Accent color on focus */
-    box-shadow: 0 0 5px rgba(3, 43, 95, 0.5);
-  }
-  
-  /* Send button */
-  .send-btn {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
+
   .send-btn button {
-    padding: 10px 30px;
-    background-color: #6c63ff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
-  
-  .send-btn button:hover {
-    background-color: #07023c;
+}
+
+/* Small device responsiveness */
+@media (max-width: 360px) {
+  .col h2 {
+    font-size: 1.8rem;
   }
-  
-  .send-btn i {
-    margin-left: 5px;
+
+  input,
+  textarea {
+    padding: 6px;
+    font-size: 0.8rem;
   }
-  
-  /* Mobile responsiveness */
-  @media (max-width: 480px) {
-    .main-container {
-      padding: 10px;
-    }
-  
-    .central-form {
-      padding: 15px;
-      max-width: 100%;
-    }
-  
-    .col h2 {
-      font-size: 2rem;
-    }
-  
-    .col a {
-      font-size: 1.5rem;
-    }
-  
-    .back-form {
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
-    }
-  
-    .img-back img {
-      border-radius: 8px;
-    }
-  
-    input,
-    textarea {
-      padding: 8px;
-      font-size: 0.9rem;
-    }
-  
-    .send-btn button {
-      padding: 8px 16px;
-      font-size: 0.9rem;
-    }
+
+  .send-btn button {
+    padding: 6px 14px;
+    font-size: 0.8rem;
   }
-  
-  /* Small device responsiveness */
-  @media (max-width: 360px) {
-    .col h2 {
-      font-size: 1.8rem;
-    }
-  
-    input,
-    textarea {
-      padding: 6px;
-      font-size: 0.8rem;
-    }
-  
-    .send-btn button {
-      padding: 6px 14px;
-      font-size: 0.8rem;
-    }
-  }
-  
+}
