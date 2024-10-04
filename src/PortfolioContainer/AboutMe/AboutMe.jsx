@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
-import Animations from "../../Utilities/Animations"; 
+import Animations from "../../Utilities/Animations";
 import "./AboutMe.css";
 
 export default function AboutMe(props) {
@@ -14,7 +14,6 @@ export default function AboutMe(props) {
     const fadeInSubscription =
       ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-    // Cleanup subscription on unmount
     return () => fadeInSubscription.unsubscribe();
   }, []);
 

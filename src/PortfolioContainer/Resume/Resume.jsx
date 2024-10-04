@@ -6,10 +6,7 @@ import { FaGraduationCap } from 'react-icons/fa';
 import { AiOutlineUser } from 'react-icons/ai';
 import { FaNode, FaDatabase, } from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
-  import { FaCode } from "react-icons/fa";
-import { FaHeart } from 'react-icons/fa';
-
-
+import { FaCode, FaHeart } from 'react-icons/fa';
 
 import "./Resume.css";
 
@@ -18,13 +15,12 @@ export default function Resume(props) {
   const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
   const iconMapping = {
     education: FaGraduationCap,
-
     node: FaNode,
-    workexperience:AiOutlineUser,
+    workexperience: AiOutlineUser,
     database: FaDatabase,
     skills: GiSkills,
-    projects:FaCode,
-    interest:FaHeart,   
+    projects: FaCode,
+    interest: FaHeart,
   };
 
   useEffect(() => {
@@ -37,11 +33,11 @@ export default function Resume(props) {
       ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
     return () => {
-      // Clean up the subscription on unmount
       fadeInSubscription.unsubscribe();
     };
   }, [props.id]);
 
+  // Keep the ResumeHeading definition only once here
   const ResumeHeading = (props) => {
     return (
       <div className="resume-heading">
@@ -62,6 +58,14 @@ export default function Resume(props) {
           <div className="resume-heading-description">
             <span>{props.description || ""}</span>
           </div>
+
+          {props.link && (
+            <div className="resume-heading-link">
+              <a href={props.link} target="_blank" rel="noopener noreferrer">
+                View Project
+              </a>
+            </div>
+          )}
         </div>
       </div>
     );
@@ -70,30 +74,24 @@ export default function Resume(props) {
   const resumeBullets = [
     {
       label: "Education",
-      logoSrc: "education", // Will display FaReact
+      logoSrc: "education",
     },
     {
       label: "Work Experience",
-      logoSrc: "workexperience", // Will display FaNode
+      logoSrc: "workexperience",
     },
     {
       label: "Skills",
-      logoSrc: "skills", // Will display FaDatabase
+      logoSrc: "skills",
     },
     {
-      label: "projects",
-      logoSrc: "projects", // Will display FaDatabase
+      label: "Projects",
+      logoSrc: "projects",
     },
     {
-      label: "interest",
-      logoSrc: "interest", // Will display FaDatabase
+      label: "Interest",
+      logoSrc: "interest",
     },
-    // {
-    //   label: "Database",
-    //   logoSrc: "database", // Will display FaDatabase
-    // },
-
-    // Additional bullets
   ];
 
   const programmingSkillsDetails = [
@@ -115,13 +113,24 @@ export default function Resume(props) {
       description:
         "A personal portfolio website to showcase all details and projects in one place.",
       subHeading: "Technology used: React JS, Bootstrap",
+      link: "https://github.com/Bisrate19/portfolio",
     },
     {
       title: "Final Year Project Website",
       duration: { fromDate: "2023", toDate: "2023" },
       description: "House Rental web app for Hossaena Town.",
       subHeading: "Technology used: HTML, CSS, JS, SQL",
+      link: "https://your-final-year-project-link.com",
     },
+    /*
+    for other projects
+    {
+      title: "Final Year Project Website",
+      duration: { fromDate: "2023", toDate: "2023" },
+      description: "House Rental web app for Hossaena Town.",
+      subHeading: "Technology used: HTML, CSS, JS, SQL",
+      link: "https://your-final-year-project-link.com",
+    }, */
   ];
 
   const resumeDetails = [
@@ -135,7 +144,7 @@ export default function Resume(props) {
     </div>,
     <div className="resume-screen-container" key="work-experience">
       <ResumeHeading
-        heading={"Tamrat Zemarianm Wholesale Trade"}
+        heading={"Tamrat Zemariam Wholesale Trade"}
         subHeading={"Data Encoder/ICT Specialist"}
         fromDate={"2023"}
         toDate={"present"}
@@ -179,6 +188,7 @@ export default function Resume(props) {
           description={project.description}
           fromDate={project.duration.fromDate}
           toDate={project.duration.toDate}
+          link={project.link} // Add link to the project
         />
       ))}
     </div>,
@@ -196,7 +206,6 @@ export default function Resume(props) {
   const getBullets = () => {
     return resumeBullets.map((bullet, index) => {
       const IconComponent = iconMapping[bullet.logoSrc];
-      const IconName = bullet.label;
       return (
         <div
           onClick={() => handleCarousal(index)}
