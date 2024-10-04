@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../../Utilities/Animations";
-import imgBack from '../../../src/images/mailz.jpeg'; // Ensure correct path
+import imgBack from "../../../src/images/mailz.jpeg"; // Ensure correct path
 import "./ContactMe.css";
+import Typical from "react-typical";
 
 export default function ContactMe(props) {
   // States to hold form data
@@ -18,8 +19,9 @@ export default function ContactMe(props) {
   };
 
   useEffect(() => {
-    const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-    
+    const fadeInSubscription =
+      ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
     // Clean up subscription to avoid memory leaks
     return () => fadeInSubscription.unsubscribe();
   }, [fadeInScreenHandler]);
@@ -34,11 +36,11 @@ export default function ContactMe(props) {
   };
 
   return (
-    <div className="main-container" id={props.id || ''}>
+    <div className="main-container" id={props.id || ""}>
       <ScreenHeading subHeading={"Let's Keep In Touch"} title={"Contact Me"} />
       <div className="central-form">
         <div className="col">
-          <h2 className="title">Get In Touch 😎</h2>
+          <h2 className="title">Get In Touch With Me 😎</h2>
           <a href="https://www.linkedin.com/in/bisrat-tamire-24737928b/">
             <i className="fa fa-linkedin-square"></i>
           </a>
@@ -57,18 +59,34 @@ export default function ContactMe(props) {
         </div>
         <div className="back-form">
           <div className="img-back">
-            <h4>Send Your Email Here!</h4>
+            <h4>
+              <Typical
+                loop={Infinity}
+                steps={["Send Your Email Here! 😎", 9900, "", 3000]}
+              />
+            </h4>
             <img src={imgBack} alt="image not found" />
           </div>
           <form onSubmit={handleSubmit}>
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" onChange={(e) => setName(e.target.value)} />
+            <input
+              type="text"
+              name="name"
+              onChange={(e) => setName(e.target.value)}
+            />
 
             <label htmlFor="email">Email</label>
-            <input type="email" name="email" onChange={(e) => setEmail(e.target.value)} />
+            <input
+              type="email"
+              name="email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
 
             <label htmlFor="message">Message</label>
-            <textarea name="message" onChange={(e) => setMessage(e.target.value)}></textarea>
+            <textarea
+              name="message"
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
 
             <div className="send-btn">
               <button type="submit">
