@@ -15,16 +15,20 @@ export default function Profile() {
               <a href="https://github.com/Bisrate19">
                 <i className="fa fa-github-square"></i>
               </a>
-              <a href="https://www.instagram.com/kidus_tamire/">
-                <i className="fa fa-instagram-square"></i>
+              <a
+                href="https://wa.me/+251973111323"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa fa-whatsapp"></i>
               </a>
 
-              <a href="https://www.youtube.com/channel/UC8crG29DqXeeLXCWM9q6bCg">
-                <i className="fa fa-youtube-square"></i>
-              </a>
-
-              <a href="#">
-                <i className="fa fa-twitter-square"></i>
+              <a
+                href="https://t.me/@BisratTamire"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa fa-telegram"></i>
               </a>
             </div>
           </div>
