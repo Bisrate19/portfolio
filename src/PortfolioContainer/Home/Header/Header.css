@@ -30,7 +30,7 @@
 }
 
 .header-options:hover {
-  color: #4ba1b9;
+  /* color: #4ba1b9; */
   text-decoration: underline;
   padding: 2px;
   cursor: pointer;

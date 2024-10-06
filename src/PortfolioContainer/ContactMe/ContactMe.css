@@ -55,7 +55,7 @@
 }
 
 .col a:hover {
-  color: #6c63ff; /* Accent color on hover */
+  color: #0b45e4; /* Accent color on hover */
 }
 
 /* Central form styles */
@@ -130,7 +130,7 @@ textarea:focus {
 
 .send-btn button {
   padding: 10px 30px;
-  background-color: #6c63ff;
+  background-color: #256bef;
   color: #fff;
   border: none;
   border-radius: 8px;
