@@ -41,7 +41,7 @@ export default function ContactMe(props) {
       <div className="central-form">
         <div className="col">
           <h2 className="title">Get In Touch With Me 😎</h2>
-          <a href="https://www.linkedin.com/in/bisrat-tamire-24737928b/">
+          <a href="https://www.linkedin.com/in/bisrattamire/">
             <i className="fa fa-linkedin-square"></i>
           </a>
           <a href="https://github.com/Bisrate19">
