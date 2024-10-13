@@ -81,7 +81,7 @@
 
 /* Hover Effect on Bullets */
 .bullet:hover {
-  background-color: #f05454;
+  background-color: #541e02;
   transform: translateX(10px);
   box-shadow: 0px 4px 15px rgba(240, 84, 84, 0.5);
 }

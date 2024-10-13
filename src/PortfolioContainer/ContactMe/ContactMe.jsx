@@ -3,14 +3,16 @@ import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../../Utilities/Animations";
 import imgBack from "../../../src/images/mailz.jpeg"; // Ensure correct path
-import "./ContactMe.css";
 import Typical from "react-typical";
+import emailjs from "emailjs-com"; // Import EmailJS
+import "./ContactMe.css";
 
 export default function ContactMe(props) {
   // States to hold form data
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   // Fade-in animation handler
   let fadeInScreenHandler = (screen) => {
@@ -29,10 +31,35 @@ export default function ContactMe(props) {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
-    // Here you can add form validation or send data to a server
+
+    // Define the template parameters for EmailJS
+    const templateParams = {
+      name: name,
+      email: email,
+      message: message,
+    };
+
+    // Send email using EmailJS
+    emailjs
+      .send(
+        "service_cntvi9l", // Replace with your EmailJS service ID
+        "template_uy3f4wi", // Replace with your EmailJS template ID
+        templateParams,
+        "bclceHT6twINaw2KZ" // Replace with your EmailJS user ID
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setSuccessMessage("Message sent successfully! 😎");
+          // Clear form fields after submission
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        (err) => {
+          console.error("FAILED...", err);
+        }
+      );
   };
 
   return (
@@ -85,6 +112,7 @@ export default function ContactMe(props) {
             <input
               type="text"
               name="name"
+              value={name} // bind input to state
               onChange={(e) => setName(e.target.value)}
             />
 
@@ -92,12 +120,14 @@ export default function ContactMe(props) {
             <input
               type="email"
               name="email"
+              value={email} // bind input to state
               onChange={(e) => setEmail(e.target.value)}
             />
 
             <label htmlFor="message">Message</label>
             <textarea
               name="message"
+              value={message} // bind textarea to state
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
 
@@ -107,6 +137,11 @@ export default function ContactMe(props) {
               </button>
             </div>
           </form>
+
+          {/* Display Success Message */}
+          {successMessage && (
+            <p className="success-message">{successMessage}</p>
+          )}
         </div>
       </div>
     </div>
