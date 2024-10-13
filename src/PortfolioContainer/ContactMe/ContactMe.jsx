@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../../Utilities/Animations";
-import imgBack from "../../../src/images/mailz.jpeg"; // Ensure correct path
+import imgBack from "../../../src/images/mailz.jpeg";
 import Typical from "react-typical";
-import emailjs from "emailjs-com"; // Import EmailJS
+import emailjs from "emailjs-com";
 import "./ContactMe.css";
 
 export default function ContactMe(props) {
@@ -34,18 +34,19 @@ export default function ContactMe(props) {
 
     // Define the template parameters for EmailJS
     const templateParams = {
-      name: name,
-      email: email,
-      message: message,
+      to_name: "Bisrat", // Replace this with the recipient's name
+      from_name: name, // Sender's name from the form input
+      from_email: email, // Sender's email from the form input
+      message: message, // Sender's message from the form input
     };
 
     // Send email using EmailJS
     emailjs
       .send(
-        "service_cntvi9l", // Replace with your EmailJS service ID
-        "template_uy3f4wi", // Replace with your EmailJS template ID
+        "service_cntvi9l", // service ID
+        "template_uy3f4wi", // template ID
         templateParams,
-        "bclceHT6twINaw2KZ" // Replace with your EmailJS user ID
+        "bclceHT6twINaw2KZ" // public key
       )
       .then(
         (response) => {
