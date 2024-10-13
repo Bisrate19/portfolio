@@ -41,6 +41,14 @@ export default function ContactMe(props) {
       <div className="central-form">
         <div className="col">
           <h2 className="title">Get In Touch With Me 😎</h2>
+          <a
+            href="mailto:bisrattamire288@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa fa-envelope"></i>
+          </a>
+
           <a href="https://www.linkedin.com/in/bisrattamire/">
             <i className="fa fa-linkedin-square"></i>
           </a>
@@ -67,7 +75,7 @@ export default function ContactMe(props) {
             <h4>
               <Typical
                 loop={Infinity}
-                steps={["Send Your Email Here! 😎", 9900, "", 3000]}
+                steps={["Send Your Email Here! 😎", 9930, "", 3000]}
               />
             </h4>
             <img src={imgBack} alt="image not found" />

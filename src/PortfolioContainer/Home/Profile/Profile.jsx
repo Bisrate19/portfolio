@@ -8,6 +8,14 @@ export default function Profile() {
         <div className="profile-details">
           <div className="colz">
             <div className="colz-icon">
+              <a
+                href="mailto:bisrattamire288@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa fa-envelope"></i>
+              </a>
+
               <a href="https://www.linkedin.com/in/bisrattamire/">
                 <i className="fa fa-linkedin-square"></i>
               </a>
