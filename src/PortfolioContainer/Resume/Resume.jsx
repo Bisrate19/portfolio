@@ -112,7 +112,7 @@ export default function Resume(props) {
       duration: { fromDate: "2023", toDate: "2023" },
       description:
         "A personal portfolio website to showcase all details and projects in one place.",
-      subHeading: "Technology used: React JS, Bootstrap",
+      subHeading: "Technology used: React JS, CSS,",
       link: "https://github.com/Bisrate19/portfolio",
     },
     {
@@ -151,18 +151,18 @@ export default function Resume(props) {
       />
       <div className="experience-description">
         <span className="resume-description-text">
-          Currently working as a data encoder and ICT specialist for a private
+          - Currently working as a data encoder and ICT specialist for a private
           company.
         </span>
         <br />
         <span className="resume-description-text">
-          Developed a website for the client with a landing page and integrated
+          - Developed a website for the client with a landing page and integrated
           the web app with backend services for a new user onboarding
           application.
         </span>
         <br />
         <span className="resume-description-text">
-          Worked on UI development based on the given designs.
+          - Worked on UI development based on the given designs.
         </span>
       </div>
     </div>,
