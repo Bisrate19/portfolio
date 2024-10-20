@@ -116,6 +116,7 @@ export default function ContactMe(props) {
           <div className="img-back">
             <h4>
               <Typical
+                speed={50}
                 loop={Infinity}
                 steps={["Send Your Email Here! 😎", 9930, "", 3000]}
               />

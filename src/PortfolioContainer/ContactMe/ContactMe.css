@@ -8,40 +8,40 @@
     #1d4644,
     #6f99a7,
     #63bde3
-  ); /* Gradient background */
-  flex-direction: column; /* Column layout */
+  );
+  flex-direction: column; 
   border-radius: 10px;
 }
 
-/* Back-form styles */
+
 .back-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex: 1;
-  padding: 20px 50px; /* Maintain padding */
+  padding: 20px 50px; 
   background-color: rgba(
     245,
     245,
     255,
     0.8
-  ); /* Slightly transparent background */
+  ); 
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
-  width: 100%; /* Set to 100% for full width inside central form */
-  max-width: 600px; /* Set max width to keep it smaller */
-  margin: auto; /* Center horizontally */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  width: 100%; 
+  max-width: 600px; 
+  margin: auto; 
 }
 
 .col {
   text-align: center;
 
-  width: 100%; /* Full width of the back-form */
+  width: 100%; 
 }
 
 .col h2 {
-  font-size: 3rem; /* Adjusted font size */
+  font-size: 3rem; 
   color: #fff;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -49,27 +49,27 @@
 
 .col a {
   color: rgb(255, 255, 255);
-  font-size: 2rem; /* Adjusted font size */
+  font-size: 2rem; 
   margin: 5px 25px 0;
   transition: color 0.3s ease;
 }
 
 .col a:hover {
-  color: #0b45e4; /* Accent color on hover */
+  color: #0b45e4; 
 }
 
-/* Central form styles */
+
 .central-form {
-  max-width: 900px; /* Make central form slightly smaller */
+  max-width: 900px; 
   padding: 20px;
   display: flex;
   border-radius: 20px;
   margin: 0 auto;
   flex-direction: column-reverse;
-  justify-content: center; /* Center content vertically */
+  justify-content: center; 
   background-color: rgb(16, 55, 55);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for form depth */
-  width: 100%; /* Ensure it takes full width of the container */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+  width: 100%; 
 }
 
 .img-back {
@@ -83,7 +83,7 @@
   border-radius: 10px;
 }
 
-/* Form and inputs */
+
 form {
   width: 100%;
   display: flex;
@@ -94,7 +94,7 @@ label {
   font-size: 1rem;
   color: #333;
   margin-bottom: 5px;
-  color: #000; /* Dark text color for labels */
+  color: #000; 
 }
 
 input,
@@ -106,7 +106,7 @@ textarea {
   border: 1px solid #ccc;
   font-size: 1rem;
   box-sizing: border-box;
-  background-color: #f5f5ff; /* Light input background */
+  background-color: #f5f5ff; 
   color: #333;
 }
 
@@ -118,11 +118,10 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #072a4b; /* Accent color on focus */
+  border-color: #072a4b; 
   box-shadow: 0 0 5px rgba(3, 43, 95, 0.5);
 }
 
-/* Send button */
 .send-btn {
   text-align: center;
   margin-top: 10px;
