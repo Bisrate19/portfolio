@@ -8,23 +8,35 @@ export default function Profile() {
         <div className="profile-details">
           <div className="colz">
             <div className="colz-icon">
-              <a href="https://www.linkedin.com/in/bisrat-tamire-24737928b/">
+              <a
+                href="mailto:bisrattamire288@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa fa-envelope"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/bisrattamire/">
                 <i className="fa fa-linkedin-square"></i>
               </a>
 
               <a href="https://github.com/Bisrate19">
                 <i className="fa fa-github-square"></i>
               </a>
-              <a href="https://www.instagram.com/kidus_tamire/">
-                <i className="fa fa-instagram-square"></i>
+              <a
+                href="https://wa.me/+251973111323"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa fa-whatsapp"></i>
               </a>
 
-              <a href="https://www.youtube.com/channel/UC8crG29DqXeeLXCWM9q6bCg">
-                <i className="fa fa-youtube-square"></i>
-              </a>
-
-              <a href="#">
-                <i className="fa fa-twitter-square"></i>
+              <a
+                href="https://t.me/@BisratTamire"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa fa-telegram"></i>
               </a>
             </div>
           </div>
@@ -40,8 +52,11 @@ export default function Profile() {
             {""}
             <h1>
               <Typical
+               speed={50}
                 loop={Infinity}
                 steps={[
+                  "Information Technology Graduate",
+                  3100,
                   "Enthusiastic Dev 😎",
                   3100,
                   "Full Stack Developer 💻",

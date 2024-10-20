@@ -17,22 +17,22 @@
 
 .header-logo {
   font-size: 50px;
-  
-  font-family: "Poppins ExtraBold";
+    font-family: "Poppins ExtraBold";
   color: var(--white);
 }
 
 .header-options {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   width: 50%;
 }
 
 .header-options:hover {
-  color: #4ba1b9;
-  text-decoration: underline;
-  padding: 2px;
+  /* color: #4ba1b9; */
+  text-decoration:wavy;
+  padding: 2px; 
   cursor: pointer;
 }
 
@@ -45,6 +45,7 @@
 .header-hamburger {
   display: none;
   color: var(--white);
+  
 }
 
 .header-option-separator {

@@ -96,14 +96,14 @@ export default function Resume(props) {
 
   const programmingSkillsDetails = [
     { skill: "JavaScript", ratingPercentage: 75 },
-    { skill: "React JS", ratingPercentage: 85 },
-    { skill: "React Native", ratingPercentage: 55 },
-    { skill: "Express JS", ratingPercentage: 45 },
-    { skill: "Node JS", ratingPercentage: 50 },
+    { skill: "React JS", ratingPercentage: 70 },
+    { skill: "React Native", ratingPercentage: 35 },
+    { skill: "Next JS", ratingPercentage: 45 },
+    { skill: "Node JS", ratingPercentage: 35 },
     { skill: "Mongo DB", ratingPercentage: 10 },
-    { skill: "Core Java", ratingPercentage: 85 },
-    { skill: "HTML", ratingPercentage: 95 },
-    { skill: "CSS", ratingPercentage: 95 },
+    { skill: "Core Java", ratingPercentage: 80 },
+    { skill: "HTML", ratingPercentage: 100 },
+    { skill: "CSS", ratingPercentage: 90 },
   ];
 
   const projectDetails = [
@@ -112,7 +112,7 @@ export default function Resume(props) {
       duration: { fromDate: "2023", toDate: "2023" },
       description:
         "A personal portfolio website to showcase all details and projects in one place.",
-      subHeading: "Technology used: React JS, Bootstrap",
+      subHeading: "Technology used: React JS, CSS,",
       link: "https://github.com/Bisrate19/portfolio",
     },
     {
@@ -122,6 +122,7 @@ export default function Resume(props) {
       subHeading: "Technology used: HTML, CSS, JS, SQL",
       link: "https://your-final-year-project-link.com",
     },
+    
     /*
     for other projects
     {
@@ -151,18 +152,18 @@ export default function Resume(props) {
       />
       <div className="experience-description">
         <span className="resume-description-text">
-          Currently working as a data encoder and ICT specialist for a private
+          - Currently working as a data encoder and ICT specialist for a private
           company.
         </span>
         <br />
         <span className="resume-description-text">
-          Developed a website for the client with a landing page and integrated
-          the web app with backend services for a new user onboarding
+          - Developed a website for the client with a landing page and integrated
+            the web app with backend services for a new user onboarding
           application.
         </span>
         <br />
         <span className="resume-description-text">
-          Worked on UI development based on the given designs.
+          - Worked on UI development based on the given designs.
         </span>
       </div>
     </div>,
