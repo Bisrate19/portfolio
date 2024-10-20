@@ -19,15 +19,16 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTANTS = {
     description:
-      "Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack for building applications with efficiency. Strong professional with a BSc, willing to be an asset for an organization.", // Fixed typos
+      // "Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack for building applications with efficiency. Strong professional with a BSc, willing to be an asset for an organization.", // Fixed typos
+      "Information Technology Graduate passionate developer with background knowledge, along with a knack for building applications with efficiency and commitment. Strong professional ethics with a BSc degree, willing to be an asset for your organization and strive for succsess and gain a valuable knowledge . ",
     highlights: {
       bullets: [
-        "Full Stack web and mobile development",
         "Front-End and Back-End Development",
+        "UI/UX Designing",
         "Database Management",
         "Cross-Platform App Development",
         "Responsive Web Design",
-        "Team Collaboration & Agile Methodologies",
+        "Communication,Team Work & Agile Methodologies",
       ],
       heading: "Here are a few highlights:",
     },

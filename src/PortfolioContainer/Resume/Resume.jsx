@@ -96,14 +96,14 @@ export default function Resume(props) {
 
   const programmingSkillsDetails = [
     { skill: "JavaScript", ratingPercentage: 75 },
-    { skill: "React JS", ratingPercentage: 85 },
-    { skill: "React Native", ratingPercentage: 55 },
-    { skill: "Express JS", ratingPercentage: 45 },
-    { skill: "Node JS", ratingPercentage: 50 },
+    { skill: "React JS", ratingPercentage: 70 },
+    { skill: "React Native", ratingPercentage: 35 },
+    { skill: "Next JS", ratingPercentage: 45 },
+    { skill: "Node JS", ratingPercentage: 35 },
     { skill: "Mongo DB", ratingPercentage: 10 },
-    { skill: "Core Java", ratingPercentage: 85 },
-    { skill: "HTML", ratingPercentage: 95 },
-    { skill: "CSS", ratingPercentage: 95 },
+    { skill: "Core Java", ratingPercentage: 80 },
+    { skill: "HTML", ratingPercentage: 100 },
+    { skill: "CSS", ratingPercentage: 90 },
   ];
 
   const projectDetails = [
@@ -122,6 +122,7 @@ export default function Resume(props) {
       subHeading: "Technology used: HTML, CSS, JS, SQL",
       link: "https://your-final-year-project-link.com",
     },
+    
     /*
     for other projects
     {
@@ -157,7 +158,7 @@ export default function Resume(props) {
         <br />
         <span className="resume-description-text">
           - Developed a website for the client with a landing page and integrated
-          the web app with backend services for a new user onboarding
+            the web app with backend services for a new user onboarding
           application.
         </span>
         <br />

@@ -52,8 +52,11 @@ export default function Profile() {
             {""}
             <h1>
               <Typical
+               speed={50}
                 loop={Infinity}
                 steps={[
+                  "Information Technology Graduate",
+                  3100,
                   "Enthusiastic Dev 😎",
                   3100,
                   "Full Stack Developer 💻",
