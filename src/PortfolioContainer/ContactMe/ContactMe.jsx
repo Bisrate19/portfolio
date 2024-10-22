@@ -3,7 +3,7 @@ import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../../Utilities/Animations";
 import imgBack from "../../../src/images/mailz.jpeg";
-import Typical from "react-typical";
+//import Typical from "react-typical";
 import emailjs from "emailjs-com";
 import "./ContactMe.css";
 
@@ -114,12 +114,12 @@ export default function ContactMe(props) {
         </div>
         <div className="back-form">
           <div className="img-back">
-            <h4>
-              <Typical
+            <h4>Send Your Email Here!
+               {/* <Typical
                 speed={50}
                 loop={Infinity}
                 steps={["Send Your Email Here! 😎", 9930, "", 3000]}
-              />
+              />  */} 
             </h4>
             <img src={imgBack} alt="image not found" />
           </div>
