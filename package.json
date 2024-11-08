@@ -1,6 +1,5 @@
 {
-"homepage": "https://bisrate19.github.io/portfolio",
-
+  "homepage": "https://Bisrate19.github.io/portfolio",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -10,8 +9,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
