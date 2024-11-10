@@ -1,5 +1,5 @@
 import React from "react";
-//import Typical from "react-typical";
+import Typical from "react-typical";
 import "./profile.css";
 export default function Profile() {
   return (
@@ -51,7 +51,7 @@ export default function Profile() {
           <span className="primary-text">
             {""}
             <h1>
-              {/* <Typical
+               <Typical
                speed={50}
                 loop={Infinity}
                 steps={[
@@ -68,7 +68,7 @@ export default function Profile() {
                   "React/Next Dev ⚛️",
                   3000,
                 ]}
-              /> */}
+              /> 
             </h1>
             <span className="profile-role-tagline">
               Knack of building applications with front and back end operations.
