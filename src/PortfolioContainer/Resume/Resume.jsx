@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import ScreenHeading from "../../Utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../../Utilities/Animations";
-import { FaGraduationCap } from 'react-icons/fa';
-import { AiOutlineUser } from 'react-icons/ai';
-import { FaNode, FaDatabase, } from "react-icons/fa";
+import { FaGraduationCap } from "react-icons/fa";
+import { AiOutlineUser } from "react-icons/ai";
+import { FaNode, FaDatabase } from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
-import { FaCode, FaHeart } from 'react-icons/fa';
+import { FaCode, FaHeart } from "react-icons/fa";
 
 import "./Resume.css";
 
@@ -37,7 +37,6 @@ export default function Resume(props) {
     };
   }, [props.id]);
 
-  // Keep the ResumeHeading definition only once here
   const ResumeHeading = (props) => {
     return (
       <div className="resume-heading">
@@ -95,15 +94,15 @@ export default function Resume(props) {
   ];
 
   const programmingSkillsDetails = [
-    { skill: "JavaScript", ratingPercentage: 75 },
-    { skill: "React JS", ratingPercentage: 70 },
-    { skill: "React Native", ratingPercentage: 35 },
-    { skill: "Next JS", ratingPercentage: 45 },
-    { skill: "Node JS", ratingPercentage: 35 },
-    { skill: "Mongo DB", ratingPercentage: 10 },
-    { skill: "Core Java", ratingPercentage: 80 },
-    { skill: "HTML", ratingPercentage: 100 },
+    { skill: "HTML", ratingPercentage: 95 },
     { skill: "CSS", ratingPercentage: 90 },
+    { skill: "JavaScript", ratingPercentage: 75 },
+    { skill: "Tailwind CSS", ratingPercentage: 80 },
+    { skill: "React JS", ratingPercentage: 70 },
+    { skill: "Vue", ratingPercentage: 60 },
+    { skill: "UI/UX designing", ratingPercentage: 40 },
+    { skill: "Networking", ratingPercentage: 75 },
+    { skill: "Communication And Team Work", ratingPercentage: 100 },
   ];
 
   const projectDetails = [
@@ -112,9 +111,10 @@ export default function Resume(props) {
       duration: { fromDate: "2023", toDate: "2023" },
       description:
         "A personal portfolio website to showcase all details and projects in one place.",
-      subHeading: "Technology used: React JS, CSS,",
+      subHeading: "Technology used: React JS, CSS",
       link: "https://github.com/Bisrate19/portfolio",
     },
+
     {
       title: "Final Year Project Website",
       duration: { fromDate: "2023", toDate: "2023" },
@@ -122,16 +122,41 @@ export default function Resume(props) {
       subHeading: "Technology used: HTML, CSS, JS, SQL",
       link: "https://your-final-year-project-link.com",
     },
-    
-    /*
-    for other projects
     {
-      title: "Final Year Project Website",
-      duration: { fromDate: "2023", toDate: "2023" },
-      description: "House Rental web app for Hossaena Town.",
-      subHeading: "Technology used: HTML, CSS, JS, SQL",
+      title: "Landing Page",
+      duration: { fromDate: "", toDate: "2023" },
+      description: "",
+      subHeading: "Technology used:Vue, Tailwind",
       link: "https://your-final-year-project-link.com",
-    }, */
+    },
+    {
+      title: "E-Commerce Website",
+      duration: { fromDate: "2023", toDate: "2023" },
+      description: "Team Member ",
+      subHeading: "Technology used: Vue, Tailwind",
+      link: "https://your-final-year-project-link.com",
+    },
+    {
+      title: "Enterprise Management System",
+      duration: { fromDate: "2022", toDate: "2022" },
+      description: "Contributed in the front end development",
+      subHeading: "Technology used: Vue, Tailwind & Laravel",
+      link: "https://your-final-year-project-link.com",
+    },
+    {
+      title: "User Authentication & Employee Management System",
+      duration: { fromDate: "2024", toDate: "2024" },
+      description: "Remote Internship at Prodigy infotech",
+      subHeading: "Technology used: react, Tailwind, node & MySQL",
+      link: "https://your-final-year-project-link.com",
+    },
+    // {
+    //   title: "Final Year Project Website",
+    //   duration: { fromDate: "2023", toDate: "2023" },
+    //   description: "House Rental web app for Hossaena Town.",
+    //   subHeading: "Technology used: HTML, CSS, JS, SQL",
+    //   link: "https://your-final-year-project-link.com",
+    // },
   ];
 
   const resumeDetails = [
@@ -157,8 +182,8 @@ export default function Resume(props) {
         </span>
         <br />
         <span className="resume-description-text">
-          - Developed a website for the client with a landing page and integrated
-            the web app with backend services for a new user onboarding
+          - Developed a website for the client with a landing page and
+          integrated the web app with backend services for a new user onboarding
           application.
         </span>
         <br />
@@ -181,17 +206,19 @@ export default function Resume(props) {
       ))}
     </div>,
     <div className="resume-screen-container" key="projects">
-      {projectDetails.map((project, index) => (
-        <ResumeHeading
-          key={index}
-          heading={project.title}
-          subHeading={project.subHeading}
-          description={project.description}
-          fromDate={project.duration.fromDate}
-          toDate={project.duration.toDate}
-          link={project.link} // Add link to the project
-        />
-      ))}
+      <div className="scrollable-projects-container">
+        {projectDetails.map((project, index) => (
+          <ResumeHeading
+            key={index}
+            heading={project.title}
+            subHeading={project.subHeading}
+            description={project.description}
+            fromDate={project.duration.fromDate}
+            toDate={project.duration.toDate}
+            link={project.link}
+          />
+        ))}
+      </div>
     </div>,
   ];
 

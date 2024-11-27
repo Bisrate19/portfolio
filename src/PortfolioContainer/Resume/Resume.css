@@ -139,9 +139,9 @@
   font-size: 14px;
   border-radius: 14px;
   color: white;
-  display: inline-block; /* Adjusts size to fit text content */
-  vertical-align: middle; /* Keeps it aligned with other elements */
-  margin-left: 250px;
+  display: flex; /* Adjusts size to fit text content */
+  vertical-align: text-top; /* Keeps it aligned with other elements */
+  margin-left: 480px;
 }
 
 /* Programming Skills Container */
@@ -180,31 +180,55 @@
   margin-left: 80px;
 }
 
+.heading-bullet {
+  padding-top: 30px;
+  font-size: larger;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
 @media (max-width: 768px) {
   .bullet-container {
-      flex-direction: row; /* Switch to horizontal layout */
-      flex-wrap: wrap; /* Allow wrapping of bullets if too wide */
-      justify-content: center;
+    flex-direction: row; /* Switch to horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping of bullets if too wide */
+    justify-content: center;
   }
 
   .bullet {
-      margin: 10px; /* Add spacing around each bullet */
-      flex: 1 1 45%; /* Flex bullets to take up 45% of the width */
+    margin: 10px; /* Add spacing around each bullet */
+    flex: 1 1 45%; /* Flex bullets to take up 45% of the width */
   }
 
   .bullet-icons {
-      margin-right: 8px; /* Adjust spacing between icon and text */
+    margin-right: 8px; /* Adjust spacing between icon and text */
   }
 }
 
 /* Even more compact for very small screens */
 @media (max-width: 480px) {
   .bullet {
-      flex: 1 1 100%; /* Each bullet takes up full width on small devices */
-      margin: 5px 0; /* Reduce margin for tighter spacing */
+    flex: 1 1 100%; /* Each bullet takes up full width on small devices */
+    margin: 5px 0; /* Reduce margin for tighter spacing */
   }
 
   .bullet-icons {
-      margin-right: 6px; /* Slightly closer icon to label for smaller screens */
+    margin-right: 6px; /* Slightly closer icon to label for smaller screens */
   }
+}
+.scrollable-projects-container {
+  max-height: 200px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.scrollable-projects-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-projects-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.scrollable-projects-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

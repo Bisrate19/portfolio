@@ -51,8 +51,8 @@ export default function Profile() {
           <span className="primary-text">
             {""}
             <h1>
-               <Typical
-               speed={50}
+              <Typical
+                speed={50}
                 loop={Infinity}
                 steps={[
                   "Information Technology Graduate",
@@ -68,7 +68,7 @@ export default function Profile() {
                   "React/Next Dev ⚛️",
                   3000,
                 ]}
-              /> 
+              />
             </h1>
             <span className="profile-role-tagline">
               Knack of building applications with front and back end operations.
@@ -80,7 +80,10 @@ export default function Profile() {
             {""}
             Hire Me{" "}
           </button>
-          <a href="myy.pdf" download="myy.pdf">
+          <a
+            href="Bisrat-Tamire-fe dev.pdf"
+            download="Bisrat-Tamire-fe dev.pdf"
+          >
             <button className="btn highlighted-btn"> Get Resume</button>
           </a>
         </div>
