@@ -148,7 +148,7 @@ export default function Resume(props) {
       duration: { fromDate: "2024", toDate: "2024" },
       description: "Remote Internship at Prodigy infotech",
       subHeading: "Technology used: react, Tailwind, node & MySQL",
-      link: "https://your-final-year-project-link.com",
+      link: "https://github.com/Bisrate19/MERN-authentication",
     },
     // {
     //   title: "Final Year Project Website",
