@@ -101,7 +101,7 @@ export default function Resume(props) {
     { skill: "React JS", ratingPercentage: 70 },
     { skill: "Vue", ratingPercentage: 60 },
     { skill: "UI/UX designing", ratingPercentage: 40 },
-    { skill: "Networking", ratingPercentage: 75 },
+    { skill: "Next JS", ratingPercentage: 65 },
     { skill: "Communication And Team Work", ratingPercentage: 100 },
   ];
 
@@ -157,6 +157,14 @@ export default function Resume(props) {
     //   subHeading: "Technology used: HTML, CSS, JS, SQL",
     //   link: "https://your-final-year-project-link.com",
     // },
+
+    {
+      title: "My Asrat",
+      duration: { fromDate: "2025", toDate: "2025" },
+      description: "Aiming to track the Asrat we owe.",
+      subHeading: "Technology used: Next.js, Tailwind CSS, MongoDB, Node.js",
+      link: "https://asrattracking.vercel.app/",
+    },
   ];
 
   const resumeDetails = [
