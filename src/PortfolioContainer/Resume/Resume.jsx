@@ -110,7 +110,7 @@ export default function Resume(props) {
       title: "My Asrat",
       duration: { fromDate: "2025", toDate: "2025" },
       description: "Aiming to track the Asrat we owe.",
-      subHeading: "Technology used: Next.js, Tailwind CSS, MongoDB, Node.js",
+      subHeading: "Technology used: Next.js, Tailwind CSS, MongoDB",
       link: "https://asrattracking.vercel.app/",
     },
     {
