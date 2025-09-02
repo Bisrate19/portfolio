@@ -107,6 +107,13 @@ export default function Resume(props) {
 
   const projectDetails = [
     {
+      title: "My Asrat",
+      duration: { fromDate: "2025", toDate: "2025" },
+      description: "Aiming to track the Asrat we owe.",
+      subHeading: "Technology used: Next.js, Tailwind CSS, MongoDB, Node.js",
+      link: "https://asrattracking.vercel.app/",
+    },
+    {
       title: "Personal Portfolio Website",
       duration: { fromDate: "2023", toDate: "2023" },
       description:
@@ -157,14 +164,6 @@ export default function Resume(props) {
     //   subHeading: "Technology used: HTML, CSS, JS, SQL",
     //   link: "https://your-final-year-project-link.com",
     // },
-
-    {
-      title: "My Asrat",
-      duration: { fromDate: "2025", toDate: "2025" },
-      description: "Aiming to track the Asrat we owe.",
-      subHeading: "Technology used: Next.js, Tailwind CSS, MongoDB, Node.js",
-      link: "https://asrattracking.vercel.app/",
-    },
   ];
 
   const resumeDetails = [
